@@ -1,0 +1,113 @@
+<!-- pages/mv/index.wxml -->
+<view class="container">
+  <view class="playVideo">
+    <video id='myvideo' src="{{mvUrl}}" autoplay="true" controls></video>
+  </view>
+  <view class="info-wrap">
+    <!-- mv信息 -->
+    <view class="mv-info">
+      <view class="title">{{mvMessage.name}}</view>
+      <view class="group">
+        <view class="date">发布：{{mvMessage.publishTime}}</view>
+        <view class="number">播放：{{mvMessage.playCount}}次</view>
+      </view>
+      <!-- <view class="desc" wx:if="{{mvMessage.desc!=null}}">{{mvMessage.desc}}</view> -->
+    </view>
+    <view class="singer-info">
+      <!-- 头像 -->
+      <view class="avatar-wrap">
+        <!-- <image  alt="" /> -->
+        <image class="" src="{{songerMessage.picUrl}}" mode="aspectFit|aspectFill|widthFix" />
+      </view>
+      <!-- 歌手名 -->
+      <text class="name">{{songerMessage.name}}</text>
+    </view>
+  </view>
+  <view class="recommend">
+    <!-- <view class="title">相关音乐</view> -->
+    <view class="title">相关推荐</view>
+    <view class="mvs">
+      <navigator class="item" wx:for="{{mvAboutList}}" wx:key="index" url="/pages/mv/index?id={{item.id}}">
+        <view class="img-wrap">
+          <image src="{{item.cover}}" alt="" />
+          <text class="iconfont icon-play"></text>
+          <view class="num-wrap">
+            <text class="num  iconfont icon-bofang1">{{item.playCount}}</text>
+          </view>
+          <text class="time">{{item.duration}}</text>
+        </view>
+        <view class="info-detail">
+          <view class="name">{{item.name}}</view>
+          <view class="singer">{{item.artistName}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 最热评论 -->
+  <view class="comment-wrap">
+    <view class="title">精彩评论</view>
+    <view class="comments-wrap">
+      <view class="item" wx:for="{{hotComments}}" wx:key="index">
+        <view class="icon-wrap">
+          <image src="{{item.user.avatarUrl}}" alt="" />
+        </view>
+        <view class="content-wrap">
+          <view class="content">
+            <view class="topC">
+              <view class="nameDate">
+                <view class="name">{{item.user.nickname}}:</view>
+                <view class="date">{{item.time}}</view>
+              </view>
+              <view class="likedCount">
+                <text class="" wx:if="{{item.likedCount}}">{{item.likedCount}}</text>
+                <icon class="iconfont  icon-dianzan" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="23" color=""></icon>
+              </view>
+            </view>
+            <view class="comment">{{item.content}}</view>
+          </view>
+          <!-- likedCount -->
+          <!-- <view class="re-content" wx-if="{{item.beReplied.length!=0}}">
+            <view class="name">{{item.beReplied[0].user.nickname}}:</view>
+            <view class="comment">{{item.beReplied[0].content}}</view>
+          </view> -->
+        </view>
+      </view>
+      <view class="lookAll">
+        <navigator class="" target="" url="" hover-class="navigator-hover">查看更多></navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 最新评论 -->
+  <view class="comment-wraview" ref="newCommentList" id="newCommentList">
+    <view class="title">最新评论({{newComments.total}})</view>
+    <view class="comments-wraview">
+      <view class="item" wx:for="{{newComments.comments}}" wx:key="index">
+        <view class="icon-wraview">
+          <image src="{{item.user.avatarUrl}}" alt="" />
+        </view>
+        <view class="content-wraview">
+          <view class="content">
+            <view class="topC">
+              <view class="nameDate">
+                <view class="name">{{item.user.nickname}}:</view>
+                <view class="date">{{item.time}}</view>
+              </view>
+              <view class="likedCount">
+                <text class="" wx:if="{{item.likedCount}}">{{item.likedCount}}</text>
+                <icon class="iconfont  icon-dianzan" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="23" color=""></icon>
+              </view>
+            </view>
+            <view class="comment">{{item.content}}</view>
+          </view>
+          <!-- <view class="re-content" v-if="item.beReviewlied.length!=0 && item.beReviewlied[0].content != null ">
+              <view class="name">{{item.beReviewlied[0].user.nickname}}:</view>
+              <view class="comment">{{item.beReviewlied[0].content}}</view>
+            </view> -->
+        </view>
+      </view>
+      <view class="lookAll">
+        <navigator class="" target="" url="" hover-class="navigator-hover">查看更多></navigator>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,96 @@
+<view class="container">
+  <!-- 榜单推荐 -->
+  <view class="ListRecommend">
+    <view class="title">榜单推荐</view>
+    <view class="group">
+      <navigator url="" open-type="switchTab" wx:for="{{Recommend}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_title content_name">{{item.name}}</view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 官方榜 -->
+  <view class="officialList">
+    <view class="title">官方榜</view>
+    <view class="group">
+      <navigator url="" open-type="switchTab" wx:for="{{officialList}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_group">
+            <view class="content_title" wx:for="{{item.tracks}}" wx:for-item="items" wx:key="*this">
+              {{index+1}}.{{items.first}} - {{items.second}}
+            </view>
+          </view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 特色榜 -->
+  <view class="characteristicList">
+    <view class="title">特色榜</view>
+    <view class="group">
+      <navigator url="" wx:for="{{characteristicList}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_title content_name">{{item.name}}</view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 全球榜 -->
+  <view class="global_List">
+    <view class="title">全球榜</view>
+    <view class="group">
+      <navigator url="" open-type="switchTab" wx:for="{{globalList}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_title">{{item.name}}</view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 地区榜 -->
+  <view class="regional_List">
+    <view class="title">地区榜</view>
+    <view class="group">
+      <navigator url="" open-type="switchTab" wx:for="{{regionalList}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_title">{{item.name}}</view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 更多榜单 -->
+  <view class="listAll">
+    <view class="title">更多榜单</view>
+    <view class="group">
+      <navigator url="" open-type="switchTab" wx:for="{{listAll}}" wx:key="*this">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.coverImgUrl}}" mode="widthFix" />
+          </view>
+          <view class="content_title">{{item.name}}</view>
+          <!-- <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view> -->
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

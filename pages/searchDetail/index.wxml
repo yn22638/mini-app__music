@@ -1,0 +1,60 @@
+<!-- pages/searchDetail/index.wxml -->
+<view class="container"  wx:if="{{showList}}">
+  <view class="searchInput">
+    <view class="group">
+      <text class="iconfont icon-sousuo"></text>
+      <input class="" value="{{inpValue}}" type="text|number|idcard|digit|time|date" placeholder="搜索歌曲、歌手、专辑" bindinput="handleInput"></input>
+      <!-- <text bindtap="handleCancel" class="iconfont icon-guanbi {{isFocus = true ? 'isFocus' : ''}}" ></text> -->
+      <text bindtap="handleCancel" class="iconfont icon-guanbi" wx:if="{{inpValue != '' ? 'isFocus' : ''}}"></text>
+    </view>
+  </view>
+  <scroll-view scroll-x="{{true}}" class="nav  {{searchConDisplay == true ? 'searchConDisplay' : ''}}">
+    <view class="scrollNav" wx:for="{{tabList}}" wx:key="index" bindtap="handleItemTap" data-index="{{index}}" url="">
+      <view class="tabListAll  {{item.isActive == true ? 'active' : ''}}" bindtap="handleItemTap" data-index="{{index}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <block wx:if="{{tabList[0].isActive}}">
+    <view class="search_content searchConList  {{searchConDisplay == true ? 'searchConDisplay' : ''}}">
+      <view class="topTitle">
+        <view class="icOrPlay">
+          <icon class="iconfont icon-bofang"></icon>
+          <view class="playAll">播放全部</view>
+        </view>
+        <view class="checkAll  iconfont icon-liebiao">多选</view>
+      </view>
+      <navigator wx:for="{{searchList}}" wx:key="id" url="" class="search_item"  bindtap='listClick' data-pos='{{index}}' data-id='{{item.id}}'>
+        <view class="musicDetail">
+          <view class="musicName">{{item.name}}</view>
+          <view class="musicNickname">{{item.ar[0].name}} - {{item.al.name}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <view class="search_content  {{searchDisplay == true ? '' : 'searchDisplay'}}">
+    <view class="search_title">搜索 “{{inpValue}}”</view>
+    <navigator wx:for="{{searchList}}" wx:key="id" url="/pages/searchDetail/index?keywords={{item.name}}" class="search_item">
+      <text class="iconfont icon-sousuo iconSearch"></text>
+      <view class="musicList">{{item.name}}</view>
+    </navigator>
+  </view>
+</view>
+<view wx:else class='background'>
+  <view class='info'>
+    <view>{{audioList[audioIndex].name||""}}</view>
+    <view>{{audioList[audioIndex].ar[0].name||""}}</view>
+  </view>
+  <image class='list' bindtap='pageChange' src='/images/list.png'></image>
+  <image class='poster {{playStatus?"rotate":"rotate-paused"}}' mode="scaleToFill" src='{{audioList[audioIndex].al.picUrl}}'></image>
+  <view class='progress'>
+    <text>{{progressText}}</text>
+    <slider class='bar' bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0' max='{{duration}}' activeColor="#1aad19" block-size="12" block-color="#1aad19" />
+    <text>{{durationText}}</text>
+  </view>
+  <view class='buttons'>
+    <image class='button' bindtap='lastMusic' src='/images/last.png'></image>
+    <image class='button' bindtap='playOrpause' src='{{playStatus?"/images/pause.png":"/images/play.png"}}'></image>
+    <image class='button' bindtap='nextMusic' src='/images/next.png'></image>
+  </view>
+</view>

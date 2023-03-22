@@ -1,0 +1,92 @@
+.container .searchInput{width:100%;padding:15px 10px}.container .searchInput .group{background-color:#ebecec;border-radius:60rpx;display:flex}.container .searchInput .group text{flex:1;display:flex;justify-content:center;align-items:center;color:#adadad;font-size:35rpx}.container .searchInput .group input{flex:10;padding:12rpx}.container .content{padding:20rpx 15rpx}.container .content .hotTitle{padding:15rpx 0rpx;border-bottom:1px solid #e4e4e4;margin-bottom:20rpx;color:#31c27c}.container .content .hotSearch .hotSearch_contentAll{margin-bottom:50rpx;width:100%;display:flex;flex-wrap:wrap}.container .content .hotSearch .hotSearch_contentAll .hotSearch_contentAllList{width:45%;margin:4rpx;font-size:24rpx}.container .content .hotSearch .hotSearch_contentAll .hotSearch_contentAllList .numId{color:#adadad}.container .content .hotSearch .hotSearch_contentAll .hotSearch_contentAllList image{width:37rpx;height:21rpx}.container .content .hotSearch .hotSearch_content{padding-top:15rpx}.container .content .hotSearch .hotSearch_content .hotSearch_contentList{border:3rpx solid #d3d4da;border-radius:64rpx;display:inline-block;height:64rpx;margin-right:16rpx;margin-bottom:16rpx;padding:0 28rpx;font-size:35rpx;line-height:64rpx;color:#333}.container .search_content .search_title{margin-left:20rpx;margin-top:30rpx;padding-bottom:20rpx;color:#698add;border-bottom:2rpx solid #dbdce1}.container .search_content .search_item{padding:20rpx;display:flex;flex-wrap:wrap;align-items:center}.container .search_content .search_item .iconSearch{color:#adadad}.container .search_content .search_item .musicList{width:95%;padding:10rpx;padding-bottom:20rpx;border-bottom:2rpx solid #dbdce1}.redText{color:red !important}.strongText{font-weight:520}.contentDisplay,.isFocus,.searchDisplay{display:none}
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.background .info {
+  position: fixed;
+  top: 140rpx;
+  left: 0;
+  right: 0;
+  font-size: 12pt;
+  color: #353535;
+}
+
+.background .list {
+  position: fixed;
+  right: 40rpx;
+  top: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.background .poster {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 400rpx;
+}
+
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.rotate-paused {
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  position: fixed;
+  bottom: 90rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  color: rgb(87, 49, 49);
+  text-align: center;
+}
+
+.progress .bar {
+  flex: 1;
+}
+
+.progress text {
+  flex-basis: 90rpx;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons .button {
+  width: 70rpx;
+  height: 70rpx;
+}

@@ -1,0 +1,253 @@
+.container {
+  image {
+    border-radius: 5%;
+  }
+
+  // 榜单推荐
+  .ListRecommend {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      navigator {
+        width: 33%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+  }
+
+  // 官方榜 officialList
+  .officialList {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+      margin-bottom: 10rpx;
+    }
+
+    .group {
+      width: 100%;
+      // display: flex;
+      // justify-content: space-between;
+
+      navigator {
+        width: 100%;
+
+        .content {
+          width: 100%;
+          padding: 1rpx 15rpx;
+          display: flex;
+
+          .content_img {
+            flex: 1;
+            width: 100%;
+
+            image {
+              width: 80%;
+              height: 80%;
+            }
+          }
+
+          .content_group {
+            flex: 2;
+            
+            display: flex;
+            // justify-content: center; 
+            flex-direction: column;
+            // align-items: center;
+            justify-content: center;
+
+            .content_title {
+              // max-width: 532rpx;
+              // text-overflow: -o-ellipsis-lastline;
+              // overflow: hidden;
+              // text-overflow: ellipsis;
+              // display: -webkit-box;
+              // -webkit-line-clamp: 2;
+              // -webkit-box-orient: vertical;  
+              padding: 5rpx 0;
+              color: #888;
+              font-size: 24rpx;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+  // 特色榜
+  .characteristicList {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      navigator {
+        width: 33%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  // 全球榜
+  .global_List {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap:wrap;
+      navigator {
+        width: 33%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+
+  //地区榜 
+  .regional_List {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      navigator {
+        width: 33%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+  //所有榜单 
+  .listAll {
+    .title {
+      font-weight: bolder;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      navigator {
+        width: 33%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

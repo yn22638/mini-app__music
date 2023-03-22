@@ -1,0 +1,129 @@
+/* pages/searchDetail/index.wxss */
+.container {
+  .searchInput {
+    width: 100%;
+    padding: 15px 10px;
+    // border-bottom: 1px solid #e4e4e4;
+
+    .group {
+      background-color: #ebecec;
+      border-radius: 60rpx;
+      display: flex;
+
+      text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #adadad;
+        font-size: 35rpx;
+      }
+
+      input {
+        flex: 10;
+        padding: 12rpx;
+      }
+    }
+  }
+
+  .search_content {
+    .search_title {
+      margin-left: 20rpx;
+      margin-top: 30rpx;
+      padding-bottom: 20rpx;
+      color: #698add;
+      border-bottom: 2rpx solid #dbdce1;
+    }
+
+    .search_item {
+      padding: 20rpx;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .iconSearch {
+        color: #adadad;
+
+      }
+
+      .musicList {
+        width: 95%;
+        padding: 10rpx;
+        padding-bottom: 20rpx;
+        border-bottom: 2rpx solid #dbdce1;
+      }
+    }
+  }
+
+  .nav {
+    width: 100%;
+    height: 60rpx;
+    white-space: nowrap;
+    padding: 0 20rpx;
+
+    .scrollNav {
+      display: inline-block;
+      width: 18%;
+      height: 100%;
+      text-align: center;
+
+      .tabListAll {
+        width: 60%;
+        height: 100%;
+      }
+    }
+  }
+
+  .searchConList {
+    padding: 20rpx;
+
+    .topTitle {
+      border-bottom: 2rpx solid #ebebeb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .icOrPlay {
+        display: flex;
+        align-items: center;
+
+        icon {
+          padding-bottom: 8rpx;
+        }
+
+        .playAll {
+          margin-left: 10rpx;
+        }
+
+      }
+
+      .checkAll {
+        font-size: 24rpx;
+      }
+    }
+    .search_item{
+      padding: 0;
+      .musicDetail{
+        width: 95%;
+        padding: 10rpx;
+        padding-bottom: 20rpx;
+        border-bottom: 2rpx solid #dbdce1;
+        .musicNickname{
+          font-size: 24rpx;
+        }
+      }
+    }
+  }
+
+}
+
+// 全局样式
+.active {
+  color: #31c27c;
+  border-bottom: 5rpx solid #31c27c;
+}
+
+.searchDisplay,
+.searchConDisplay {
+  display: none;
+}

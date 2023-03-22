@@ -1,0 +1,98 @@
+<!-- pages/songList/index.wxml -->
+<view class="container" id='myText' wx:if="{{showList}}">
+  <view class="songTitle">
+    <view class="bgcImg">
+      <image src="{{songIntroduce.coverImgUrl}}" class="user_bg" />
+    </view>
+    <view class="content">
+      <view class="left">
+        <view class="iconfont  icon-bofang1 playCount">{{songIntroduce.playCount}}</view>
+        <image class="" src="{{songIntroduce.coverImgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+      </view>
+      <view class="right">
+        <view class="titleName">{{songIntroduce.name}}</view>
+        <view class="user">
+          <image class="" src="{{songIntroduce.creator.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+          <view class="nikeName">{{songIntroduce.creator.nickname}}</view>
+          <icon class="iconfont  icon-jiantou"></icon>
+        </view>
+        <view class="titleIntroduce">{{songIntroduce.description}}</view>
+      </view>
+    </view>
+    <view class="iconList">
+      <view class="iconGroup">
+        <view class="navFour" bindtap="goToMusicDetail" data-id="{{songIntroduce.id}}">
+          <icon class="iconfont  icon-pinglun" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear"></icon>
+          <view class="title">{{songIntroduce.commentCount}}</view>
+        </view>
+      </view>
+      <view class="iconGroup">
+        <view class="navFour">
+          <icon class="iconfont icon-fenxiang" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear"></icon>
+          <view class="title">分享</view>
+        </view>
+      </view>
+      <view class="iconGroup">
+        <view class="navFour">
+          <icon class="iconfont    icon-xiazai" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear"></icon>
+          <view class="title">下载</view>
+        </view>
+      </view>
+      <view class="iconGroup">
+        <view class="navFour">
+          <icon class="iconfont    icon-checkbox" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear"></icon>
+          <view class="title">多选</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="musicList">
+    <view class="musicTitle">
+      <icon class="iconfont icon-bofang" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="33"></icon>
+      <view class="titleName">
+        播放全部
+        <text>(共{{songMusicList.length}}首)</text>
+      </view>
+      <button class="iconfont  icon-jiahao">
+        <text class="">收藏({{songIntroduce.subscribedCount}})</text>
+      </button>
+    </view>
+    <view class="musicContent">
+      <navigator class="nav" wx:for="{{songMusicList}}" wx:key="index"  bindtap='listClick'  data-pos='{{index}}' data-id='{{item.id}}'>
+        <view class="musicIndex">{{index+1}}</view>
+        <view class="musicDetail">
+          <view class="musicName">
+            {{item.name}}
+            <text style="color:rgb(158, 158, 158);" wx:if="{{item.alia.length != 0}}">
+              ({{item.alia[0]}})
+            </text>
+            <text style="color:rgb(158, 158, 158);" wx:if="{{item.tns}}">({{item.tns[0]}})</text>
+          </view>
+          <view class="nickName">{{item.ar[0].name}}/{{item.ar[1].name}} - {{item.name}}</view>
+        </view>
+        <view class="isMv">
+          <icon class="iconfont  icon-MV" wx:if="{{item.mv>0}}"></icon>
+        </view>
+        <view class="iconShare iconfont  icon-yuandiancaidan"></view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view wx:else class='background'>
+  <view class='info'>
+    <view>{{audioList[audioIndex].name||""}}</view>
+    <view>{{audioList[audioIndex].ar[0].name||""}}</view>
+  </view>
+  <image class='list' bindtap='pageChange' src='/images/list.png'></image>
+  <image class='poster {{playStatus?"rotate":"rotate-paused"}}' mode="scaleToFill" src='{{audioList[audioIndex].al.picUrl}}'></image>
+  <view class='progress'>
+    <text>{{progressText}}</text>
+    <slider class='bar' bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0' max='{{duration}}' activeColor="#1aad19" block-size="12" block-color="#1aad19" />
+    <text>{{durationText}}</text>
+  </view>
+  <view class='buttons'>
+    <image class='button' bindtap='lastMusic' src='/images/last.png'></image>
+    <image class='button' bindtap='playOrpause' src='{{playStatus?"/images/pause.png":"/images/play.png"}}'></image>
+    <image class='button' bindtap='nextMusic' src='/images/next.png'></image>
+  </view>
+</view>

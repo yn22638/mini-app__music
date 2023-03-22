@@ -1,0 +1,87 @@
+<!-- index.wxml -->
+<view class="container" wx:if="{{showList}}">
+  <!-- 轮播图 -->
+  <view class="banner">
+    <swiperS swiperAll='{{swiperList}}'></swiperS>
+  </view>
+  <!-- 歌单推荐 -->
+  <view class="muiscCommend">
+    <view class="title">推荐歌单<navigator url=""><text class="">查看更多<text class="iconfont icon-jiantou  lookAll" /></text></navigator>
+    </view>
+    <view class="group">
+      <scroll-view scroll-x="{{true}}" class='nav'>
+        <!-- bindtap="toSongList" data-id="{{item.id}}" 传参数跳转 -->
+        <navigator wx:for="{{musicComment}}" wx:key="id" url="/pages/songList/index?id={{item.id}}">
+          <view class="content">
+            <view class="content_PlayCount">
+              <text class="iconfont  icon-hanhan-01-01">{{playCountArr[index]}}</text>
+            </view>
+            <view class="content_img">
+              <image class="" src="{{item.picUrl}}" mode="widthFix" />
+            </view>
+            <view class="content_title">{{item.name}}</view>
+          </view>
+        </navigator>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 最新音乐 -->
+  <view class="newMusic">
+    <view class="title">最新音乐<navigator url=""><text class="">查看更多<text class="iconfont icon-jiantou  lookAll" /></text></navigator>
+    </view>
+    <view class="group">
+      <navigator wx:for="{{newMusic}}" wx:key="id" bindtap='listClick' data-pos='{{index}}' data-id='{{item.id}}'>
+        <view class="content">
+          <view class="songerLeft">
+            <view class="content_title">
+              {{item.name}}
+              <text wx:if="{{item.song.alias.length  != 0}}" class="alias">
+                ({{item.song.alias[0]}})
+              </text>
+            </view>
+            <view class="content_title content_songerName">
+              {{item.song.artists[0].name}} - {{item.song.album.name}}
+            </view>
+          </view>
+          <view class="IconRight">
+            <text class="iconfont icon-bofang iconFont"></text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 推荐mv -->
+  <view class="mvCommend">
+    <view class="title">推荐MV<navigator url=""><text class="">查看更多<text class="iconfont icon-jiantou  lookAll" /></text></navigator>
+    </view>
+    <view class="group">
+      <navigator wx:for="{{mvComment}}" wx:key="id"  url="/pages/mv/index?id={{item.id}}">
+        <view class="content">
+          <view class="content_img">
+            <image class="" src="{{item.cover}}" mode="widthFix" />
+          </view>
+          <view class="content_title content_name">{{item.name}}</view>
+          <view class="content_title content_artilsName">{{item.artists[0].alias[0]}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view wx:else class='background'>
+  <view class='info'>
+    <view>{{audioList[audioIndex].name||""}}</view>
+    <view>{{audioList[audioIndex].song.artists[0].name||""}}</view>
+  </view>
+  <image class='list' bindtap='pageChange' src='/images/list.png'></image>
+  <image class='poster {{playStatus?"rotate":"rotate-paused"}}' mode="scaleToFill" src='{{audioList[audioIndex].picUrl}}'></image>
+  <view class='progress'>
+    <text>{{progressText}}</text>
+    <slider class='bar' bindchange="sliderChange" bindchanging="sliderChanging" value="{{progress}}" step="1" min='0' max='{{duration}}' activeColor="#1aad19" block-size="12" block-color="#1aad19" />
+    <text>{{durationText}}</text>
+  </view>
+  <view class='buttons'>
+    <image class='button' bindtap='lastMusic' src='/images/last.png'></image>
+    <image class='button' bindtap='playOrpause' src='{{playStatus?"/images/pause.png":"/images/play.png"}}'></image>
+    <image class='button' bindtap='nextMusic' src='/images/next.png'></image>
+  </view>
+</view>

@@ -1,0 +1,124 @@
+/* pages/search/index.wxss */
+.container {
+
+  .searchInput {
+    width: 100%;
+    padding: 15px 10px;
+    // border-bottom: 1px solid #e4e4e4;
+
+    .group {
+      background-color: #ebecec;
+      border-radius: 60rpx;
+      display: flex;
+
+      text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #adadad;
+        font-size: 35rpx;
+      }
+
+      input {
+        flex: 10;
+        padding: 12rpx;
+      }
+    }
+  }
+
+  .content {
+    padding: 20rpx 15rpx;
+
+    .hotTitle {
+      padding: 15rpx 0rpx;
+      border-bottom: 1px solid #e4e4e4;
+      margin-bottom: 20rpx;
+      color: #31c27c;
+    }
+
+    .hotSearch {
+      .hotSearch_contentAll {
+        margin-bottom: 50rpx;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .hotSearch_contentAllList {
+          width: 45%;
+          margin: 4rpx;
+          font-size: 24rpx;
+
+          .numId {
+            color: #adadad;
+          }
+
+          image {
+            width: 37rpx;
+            height: 21rpx;
+          }
+        }
+      }
+
+
+      .hotSearch_content {
+        padding-top: 15rpx;
+
+        .hotSearch_contentList {
+          border: 3rpx solid #d3d4da;
+          // background-color: blue;
+          border-radius: 64rpx;
+          display: inline-block;
+          height: 64rpx;
+          margin-right: 16rpx;
+          margin-bottom: 16rpx;
+          padding: 0 28rpx;
+          font-size: 35rpx;
+          line-height: 64rpx;
+          color: #333;
+        }
+      }
+
+    }
+  }
+  .search_content {
+    .search_title{
+      margin-left: 20rpx;
+      margin-top: 30rpx;
+      padding-bottom: 20rpx;
+      color: #698add;
+      border-bottom:2rpx solid #dbdce1;
+    }
+    .search_item{
+      padding: 20rpx;
+      display: flex;
+      flex-wrap:wrap;
+      align-items: center;
+      .iconSearch{
+        color: #adadad;
+        
+      }
+      .musicList{
+        width: 95%;
+        padding: 10rpx;
+        padding-bottom: 20rpx;
+        border-bottom:2rpx solid #dbdce1;
+      }
+    }
+  }
+}
+
+// 全局样式
+.redText {
+  color: red !important;
+}
+
+.strongText {
+  font-weight: 520;
+
+}
+.contentDisplay,
+.isFocus,
+.searchDisplay {
+  display: none;
+}

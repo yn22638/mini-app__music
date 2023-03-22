@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/songerList/index",
+    "pages/rankingList/index",
+    "pages/search/index",
+    "pages/searchDetail/index",
+    "pages/songList/index",
+    "pages/songReview/index",
+    "pages/playMusic/index",
+    "pages/audio/index",
+    "pages/mv/index",
+    "pages/mvAll/index",
+    "pages/mvDemo/index"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#31c27c",
+    "navigationBarTitleText": "QQ音乐",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle":"dark"
+  },
+  "tabBar": {
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text":"推荐"
+      },
+      {
+        "pagePath": "pages/songerList/index",
+        "text":"歌手列表"
+      },
+      {
+        "pagePath": "pages/rankingList/index",
+        "text":"排行榜"
+      },
+      {
+        "pagePath": "pages/search/index",
+        "text":"搜索"
+      }
+    ],
+    "position":"top"
+  },
+  "requiredBackgroundModes": ["audio"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

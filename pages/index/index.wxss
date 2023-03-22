@@ -1,0 +1,289 @@
+.container .banner {
+  padding: 20rpx 0;
+  width: 100%
+}
+
+.container .muiscCommend .title {
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding-left: 15rpx;
+  border-left: 4rpx solid #31c27c
+}
+
+.container .muiscCommend .title text {
+  font-weight: 10;
+  font-size: 28rpx
+}
+
+.container .muiscCommend .title .lookAll {
+  padding-right: 10rpx
+}
+
+.container .muiscCommend .group {
+  width: 100%;
+  height: 330rpx
+}
+
+.container .muiscCommend .group .nav {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap
+}
+
+.container .muiscCommend .group .nav navigator {
+  display: inline-block;
+  width: 32%;
+  height: 100%;
+  padding: 15rpx
+}
+
+.container .muiscCommend .group .nav navigator .content {
+  width: 100%;
+  height: 100%
+}
+
+.container .muiscCommend .group .nav navigator .content .content_PlayCount {
+  width: 28%;
+  color: #fff;
+  position: absolute;
+  top: 14rpx;
+  font-size: 24rpx
+}
+
+.container .muiscCommend .group .nav navigator .content .content_PlayCount text {
+  float: right;
+  margin-right: 5rpx
+}
+
+.container .muiscCommend .group .nav navigator .content .content_img {
+  width: 100%;
+  height: 70%
+}
+
+.container .muiscCommend .group .nav navigator .content .content_img image {
+  width: 100%;
+  height: 100%
+}
+
+.container .muiscCommend .group .nav navigator .content .content_title {
+  padding-top: 10rpx;
+  height: 77rpx;
+  font-size: 24rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.container .newMusic {
+  padding: 15rpx 0
+}
+
+.container .newMusic .title {
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding-left: 15rpx;
+  border-left: 4rpx solid #31c27c
+}
+
+.container .newMusic .title text {
+  font-weight: 10;
+  font-size: 28rpx
+}
+
+.container .newMusic .title .lookAll {
+  padding-right: 10rpx
+}
+
+.container .newMusic .group {
+  width: 100%;
+  display: flex;
+  flex-direction: column
+}
+
+.container .newMusic .group navigator {
+  width: 100%
+}
+
+.container .newMusic .group navigator .content {
+  width: 100%;
+  margin: 15rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 2rpx solid #dde5ee;
+  display: flex
+}
+
+.container .newMusic .group navigator .content .songerLeft {
+  flex: 3
+}
+
+.container .newMusic .group navigator .content .songerLeft .content_title {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.container .newMusic .group navigator .content .songerLeft .content_title .alias {
+  color: #888
+}
+
+.container .newMusic .group navigator .content .songerLeft .content_songerName {
+  font-size: 25rpx;
+  margin-top: 4rpx;
+  color: #888
+}
+
+.container .newMusic .group navigator .content .IconRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.container .newMusic .group navigator .content .IconRight .iconFont {
+  font-size: 40rpx;
+  color: #31c27c
+}
+
+.container .mvCommend .title {
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  padding-left: 15rpx;
+  border-left: 4rpx solid #31c27c
+}
+
+.container .mvCommend .title text {
+  font-weight: 10;
+  font-size: 28rpx
+}
+
+.container .mvCommend .title .lookAll {
+  padding-right: 10rpx
+}
+
+.container .mvCommend .group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+.container .mvCommend .group navigator {
+  width: 30%
+}
+
+.container .mvCommend .group navigator .content {
+  width: 100%;
+  padding: 15rpx
+}
+
+.container .mvCommend .group navigator .content .content_img {
+  width: 100%
+}
+
+.container .mvCommend .group navigator .content .content_title {
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.background .info {
+  position: fixed;
+  top: 140rpx;
+  left: 0;
+  right: 0;
+  font-size: 12pt;
+  color: #353535;
+}
+
+.background .list {
+  position: fixed;
+  right: 40rpx;
+  top: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.background .poster {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 400rpx;
+}
+
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.rotate-paused {
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  position: fixed;
+  bottom: 90rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  color: rgb(87, 49, 49);
+  text-align: center;
+}
+
+.progress .bar {
+  flex: 1;
+}
+
+.progress text {
+  flex-basis: 90rpx;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons .button {
+  width: 70rpx;
+  height: 70rpx;
+}

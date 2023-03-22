@@ -1,0 +1,236 @@
+/**index.wxss**/
+.container {
+  // 轮播如
+  .banner {
+    padding: 20rpx 0;
+    width: 100%;
+  }
+
+  // 歌单样式
+  .muiscCommend {
+    .title {
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-between;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+
+      text {
+        font-weight: 10;
+        font-size: 28rpx;
+      }
+
+      .lookAll {
+        padding-right: 10rpx;
+      }
+    }
+
+    .group {
+      width: 100%;
+      height: 330rpx;
+
+      .nav {
+        width: 100%;
+        height: 100%;
+        // overflow:auto;
+        // 可以滚动但不能换行
+        white-space: nowrap;
+        // 不可以滚动但可以换行
+        // white-space: normal;
+
+        navigator {
+          display: inline-block;
+          width: 32%;
+          height: 100%;
+          padding: 15rpx;
+
+          .content {
+            width: 100%;
+            height: 100%;
+
+
+            .content_PlayCount {
+              // float: right;
+              width: 28%;
+              // display: flex;
+              // flex-direction:column-reverse;
+              color: #fff;
+              position: absolute;
+              top: 14rpx;
+              // left: 100rpx;
+              font-size: 24rpx;
+
+              text {
+                float: right;
+                margin-right: 5rpx;
+              }
+            }
+
+            .content_img {
+              width: 100%;
+              height: 70%;
+
+              image {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .content_title {
+              // 关闭只显示一行
+              // white-space: normal; 
+              padding-top: 10rpx;
+              height: 77rpx;
+              font-size: 24rpx;
+              text-overflow: -o-ellipsis-lastline;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+          }
+
+
+        }
+      }
+
+    }
+
+  }
+
+  // 歌曲样式
+  .newMusic {
+    padding: 15rpx 0;
+
+    .title {
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-between;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+
+      text {
+        font-weight: 10;
+        font-size: 28rpx;
+      }
+
+      .lookAll {
+        padding-right: 10rpx;
+      }
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      // flex-wrap: wrap;
+      flex-direction: column;
+
+      navigator {
+        width: 100%;
+
+        .content {
+          width: 100%;
+          margin: 15rpx;
+          padding-bottom: 15rpx;
+          border-bottom: 2rpx solid #dde5ee;
+          // .content_img {
+          //   width: 100%;
+
+          //   image {
+          //     border: 1px solid black;
+          //     border-radius: 50%;
+          //   }
+          // }
+          display: flex;
+
+          .songerLeft {
+            flex: 3;
+
+            .content_title {
+              font-size: 28rpx;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              .alias {
+                color: #888;
+              }
+            }
+
+            .content_songerName {
+              font-size: 25rpx;
+              margin-top: 4rpx;
+              color: #888;
+            }
+          }
+
+          .IconRight {
+            flex: 1;
+            // background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .iconFont {
+              font-size: 40rpx;
+              color: #31c27c;
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+
+  // mv样式 mvCommend
+  .mvCommend {
+    .title {
+      font-weight: bolder;
+      display: flex;
+      justify-content: space-between;
+      font-size: 35rpx;
+      padding-left: 15rpx;
+      border-left: 4rpx solid #31c27c;
+
+      text {
+        font-weight: 10;
+        font-size: 28rpx;
+      }
+
+      .lookAll {
+        padding-right: 10rpx;
+      }
+    }
+
+    .group {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      navigator {
+        width: 30%;
+
+        .content {
+          width: 100%;
+          padding: 15rpx;
+
+          .content_img {
+            width: 100%;
+          }
+
+          .content_title {
+            font-size: 24rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+  }
+}

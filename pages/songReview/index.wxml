@@ -1,0 +1,85 @@
+<!-- pages/songReview/index.wxml -->
+<view class="container">
+  <veiw class="mListDetail">
+    <image class="" src="{{songIntroduce.coverImgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+    <view class="mListAll">
+      <view class="mListName">{{songIntroduce.name}}</view>
+      <view class="nickName">
+        by -
+        <text>{{songIntroduce.creator.nickname}}</text>
+      </view>
+    </view>
+    <view bindtap="goToMusicDetail" data-id="{{songIntroduce.id}}">
+      <icon class="iconfont icon-dajiantouyou" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="33" color=""></icon>
+    </view>
+  </veiw>
+  <view class="mListComment">
+    <view class="title">
+      <text class="reLeft" selectable="false" space="false" decode="false">评论区</text>
+      <view class="tabListRight">
+        <!-- 此处需要变量，然后变成点击刷新不同的内容 案例在购物车按里面 -->
+        <view wx:for="{{tabList}}" wx:key="index" bindtap="handleItemTap" data-index="{{index}}" class="recommend  {{item.isActive == true ? 'active' : ''}}">
+          {{item.name}}
+        </view>
+        <!-- <text class="" selectable="false" space="false" decode="false">|</text>
+        <view class="recommend">最热</view>
+        <text class="" selectable="false" space="false" decode="false">|</text>
+        <view class="recommend">最新</view> -->
+      </view>
+    </view>
+    <block wx:if="{{tabList[0].isActive}}">
+      <view class="mListContent">
+        <view class="comment" wx:for="{{commentAll}}" wx:key="index">
+          <view class="commentDetail">
+            <image class="" src="{{item.user.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            <view class="nickNameData">
+              <view class="nickName">{{item.user.nickname}}</view>
+              <view class="userData">{{item.time}}</view>
+            </view>
+            <view class="iconNum">
+              <text class="">{{item.likedCount}}</text>
+              <icon class="iconfont  icon-dianzan" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="23" color=""></icon>
+            </view>
+          </view>
+          <view class="commentContent">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabList[1].isActive}}">
+      <view class="mListContent">
+        <view class="comment" wx:for="{{musicComment.hotComments}}" wx:key="index">
+          <view class="commentDetail">
+            <image class="" src="{{item.user.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            <view class="nickNameData">
+              <view class="nickName">{{item.user.nickname}}</view>
+              <view class="userData">{{item.time}}</view>
+            </view>
+            <view class="iconNum">
+              <text class="">{{item.likedCount}}</text>
+              <icon class="iconfont  icon-dianzan" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="23" color=""></icon>
+            </view>
+          </view>
+          <view class="commentContent">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+    <block wx:if="{{tabList[2].isActive}}">
+      <view class="mListContent">
+        <view class="comment" wx:for="{{musicComment.comments}}" wx:key="index">
+          <view class="commentDetail">
+            <image class="" src="{{item.user.avatarUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+            <view class="nickNameData">
+              <view class="nickName">{{item.user.nickname}}</view>
+              <view class="userData">{{item.time}}</view>
+            </view>
+            <view class="iconNum">
+              <text class="">{{item.likedCount}}</text>
+              <icon class="iconfont  icon-dianzan" type="success|success_no_circle|info|warn|waiting|cancel|download|search|clear" size="23" color=""></icon>
+            </view>
+          </view>
+          <view class="commentContent">{{item.content}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

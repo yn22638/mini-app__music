@@ -1,0 +1,37 @@
+<!-- pages/search/index.wxml -->
+<view class="container">
+  <view class="searchInput">
+    <view class="group">
+      <text class="iconfont icon-sousuo"></text>
+      <input class="" value="{{inpValue}}" type="text|number|idcard|digit|time|date" placeholder="搜索歌曲、歌手、专辑" bindinput="handleInput"></input>
+      <!-- <text bindtap="handleCancel" class="iconfont icon-guanbi {{isFocus = true ? 'isFocus' : ''}}" ></text> -->
+      <text bindtap="handleCancel" class="iconfont icon-guanbi" wx:if="{{isFocus == true ? 'isFocus' : ''}}"></text>
+    </view>
+  </view>
+  <view class="content  {{contentDisplay == true  ? 'contentDisplay':''}}">
+    <view class="hotSearch">
+      <view class="hotTitle">热搜榜</view>
+      <view class="hotSearch_contentAll">
+        <view class="hotSearch_contentAllList" wx:for="{{hotSearchAll}}" wx:key="index" bind:tap="upDateMusic" data-value="{{item.searchWord}}">
+          <text class="{{index < 3  ?  'redText' : ''}} numId">{{index+1}}</text><text class="{{index < 3  ?  'strongText' : ''}}" decode="{{true}}">&nbsp;{{item.searchWord}}&nbsp;&nbsp;</text>
+          <image class="" src="{{item.iconUrl}}" mode="" wx:if="{{item.iconUrl != null}}" />
+        </view>
+      </view>
+      <view class="hotTitle">热门搜索</view>
+      <view class="hotSearch_content">
+        <view class="hotSearch_contentList" wx:for="{{hotSearch}}" wx:key="index" bind:tap="upDateMusic" data-value="{{item.first}}">{{item.first}}</view>
+      </view>
+    </view>
+    <view class="searchList"></view>
+  </view>
+  <!-- {{searchDisplay == true ? 'search_content' :''}} -->
+  <view class="search_content  {{searchDisplay == true ? '' :'searchDisplay'}}">
+    <view class="search_title">搜索 “{{inpValue}}”</view>
+    <navigator wx:for="{{searchList}}" wx:key="id" url="" class="search_item">
+      <text class="iconfont icon-sousuo iconSearch"></text>
+      <view class="musicList" bindtap="toSearchMusic" data-keywords='{{item.name}}'>
+        {{item.name}}
+      </view>
+    </navigator>
+  </view>
+</view>

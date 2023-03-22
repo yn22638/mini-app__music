@@ -1,0 +1,92 @@
+.container .searchInput{width:100%;padding:15px 10px}.container .searchInput .group{background-color:#ebecec;border-radius:60rpx;display:flex}.container .searchInput .group text{flex:1;display:flex;justify-content:center;align-items:center;color:#adadad;font-size:35rpx}.container .searchInput .group input{flex:10;padding:12rpx}.container .search_content .search_title{margin-left:20rpx;margin-top:30rpx;padding-bottom:20rpx;color:#698add;border-bottom:2rpx solid #dbdce1}.container .search_content .search_item{padding:20rpx;display:flex;flex-wrap:wrap;align-items:center}.container .search_content .search_item .iconSearch{color:#adadad}.container .search_content .search_item .musicList{width:95%;padding:10rpx;padding-bottom:20rpx;border-bottom:2rpx solid #dbdce1}.container .nav{width:100%;height:60rpx;white-space:nowrap;padding:0 20rpx}.container .nav .scrollNav{display:inline-block;width:18%;height:100%;text-align:center}.container .nav .scrollNav .tabListAll{width:60%;height:100%}.container .searchConList{padding:20rpx}.container .searchConList .topTitle{border-bottom:2rpx solid #ebebeb;display:flex;justify-content:space-between;align-items:center}.container .searchConList .topTitle .icOrPlay{display:flex;align-items:center}.container .searchConList .topTitle .icOrPlay icon{padding-bottom:8rpx}.container .searchConList .topTitle .icOrPlay .playAll{margin-left:10rpx}.container .searchConList .topTitle .checkAll{font-size:24rpx}.container .searchConList .search_item{padding:0}.container .searchConList .search_item .musicDetail{width:95%;padding:10rpx;padding-bottom:20rpx;border-bottom:2rpx solid #dbdce1}.container .searchConList .search_item .musicDetail .musicNickname{font-size:24rpx}.active{color:#31c27c;border-bottom:5rpx solid #31c27c}.searchDisplay,.searchConDisplay{display:none}
+.background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.background .info {
+  position: fixed;
+  top: 140rpx;
+  left: 0;
+  right: 0;
+  font-size: 12pt;
+  color: #353535;
+}
+
+.background .list {
+  position: fixed;
+  right: 40rpx;
+  top: 40rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.background .poster {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  margin-top: 400rpx;
+}
+
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.rotate-paused {
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  position: fixed;
+  bottom: 90rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  color: rgb(87, 49, 49);
+  text-align: center;
+}
+
+.progress .bar {
+  flex: 1;
+}
+
+.progress text {
+  flex-basis: 90rpx;
+}
+
+.buttons {
+  position: fixed;
+  bottom: 20rpx;
+  left: 50rpx;
+  right: 50rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons .button {
+  width: 70rpx;
+  height: 70rpx;
+}

@@ -1,0 +1,117 @@
+/* pages/songReview/index.wxss */
+.container {
+  background-color: rgb(245, 245, 245);
+
+  .mListDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200rpx;
+    padding: 15rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+
+    image {
+      flex: 3;
+      height: 150rpx;
+    }
+
+    .mListAll {
+      flex: 10;
+      padding: 0 15rpx;
+
+      .mListName {
+        padding-bottom: 10rpx;
+        font-size: 28rpx;
+      }
+
+      .nickName {
+        color: rgb(158, 158, 158);
+        font-size: 24rpx;
+
+        text {
+          color: #698add;
+        }
+      }
+    }
+
+    icon {
+      flex: 1;
+    }
+  }
+
+  .mListComment {
+    background-color: #fff;
+    padding: 15rpx;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .reLeft {
+        font-size: 27rpx;
+      }
+
+      .tabListRight {
+        display: flex;
+        width: 227rpx;
+        font-size: 26rpx;
+        justify-content: flex-end;
+        .recommend {
+          padding: 0 9rpx;
+        }
+
+        text {}
+      }
+    }
+
+    .mListContent {
+      .comment {
+        padding: 10rpx 0;
+        .commentDetail{
+          display: flex;
+          padding: 15rpx 0;
+          align-items: center;
+          image{
+            flex: 1.2;
+            height: 60rpx;
+            border-radius: 50%;
+          }
+          .nickNameData{
+            flex: 9;
+            padding: 0 10rpx;
+            .userData{
+              color: rgb(158, 158, 158);
+              font-size: 25rpx;
+            }
+          }
+          .iconNum{
+            flex: 3;
+            padding-right: 10rpx;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            text{
+              margin-right: 14rpx;
+              color: rgb(158, 158, 158);
+            }
+            icon{
+              padding-bottom: 14rpx;
+            }
+          }
+        }
+        .commentContent{
+          padding-left: 10%;
+        }
+      }
+    }
+  }
+}
+
+.active{
+  // color: ;
+  font-size: 27rpx;
+  font-weight:bold;
+  border-right: 3rpx;
+}

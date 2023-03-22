@@ -1,0 +1,220 @@
+/* pages/songList/index.wxss */
+.container {
+  height: 770rpx;
+
+  .songTitle {
+    // padding-top: 16%;
+    width: 100%;
+    height: 600rpx;
+    position: relative;
+
+    .bgcImg {
+      width: 102%;
+      // height: 50vh;
+      height: 100%;
+      left: -8rpx;
+      position: relative;
+      // 高斯模糊
+      filter: blur(50rpx);
+      z-index: -1;
+
+      image {
+        height: 100%;
+      }
+    }
+
+    .content {
+      display: flex;
+      position: relative;
+      top: -92%;
+      color: #fff;
+
+      .left {
+        flex: 1;
+        padding: 15rpx;
+
+        .playCount {
+          position: absolute;
+          top: 24rpx;
+          left: 135rpx;
+          color: white;
+        }
+
+        image {
+          height: 250rpx;
+          border-radius: 10rpx;
+        }
+      }
+
+      .right {
+        flex: 2;
+        padding: 10rpx;
+
+        .titleName {
+          margin-bottom: 15rpx;
+          font-size: 32rpx;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          // padding-bottom: 10rpx;
+          padding: 20rpx 0;
+
+          image {
+            width: 60rpx;
+            height: 60rpx;
+            border-radius: 50%;
+          }
+
+          .nikeName {
+            margin-left: 8rpx;
+            max-width: 352rpx;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 28rpx;
+          }
+
+          icon {
+            font-size: 36rpx;
+            margin-left: 3rpx;
+          }
+        }
+
+        .titleIntroduce {
+          color: rgb(224, 224, 224);
+          max-width: 500px;
+          padding-right: 10rpx;
+          // height: 77rpx;
+          font-size: 24rpx;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: wrap;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+      }
+    }
+
+    .iconList {
+      display: flex;
+      position: relative;
+      top: -92%;
+      color: #fff;
+
+      .iconGroup {
+        // display: flex;
+        // flex-direction: column;
+        flex: 1;
+
+        .navFour {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+
+          icon {
+            font-size: 34rpx;
+          }
+
+          .title {
+            font-size: 26rpx;
+          }
+        }
+
+
+      }
+    }
+  }
+
+  .musicList {
+    padding: 15rpx;
+    position: relative;
+    top: -156rpx;
+    background-color: #fff;
+    border-radius: 15rpx;
+
+    .musicTitle {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70rpx;
+
+      icon {
+        flex: 1;
+        padding-bottom: 26rpx;
+      }
+
+      .titleName {
+        flex: 10;
+
+        text {
+          letter-spacing: 1rpx;
+          color: rgb(158, 158, 158);
+          font-size: 24rpx;
+        }
+      }
+
+      button {
+        flex: 4;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        background-color: #31c27c;
+        border-radius: 50rpx;
+        color: #fff;
+        padding: 15rpx;
+        align-items: center;
+
+        text {
+          font-size: 25rpx;
+          padding-left: 5rpx;
+          letter-spacing: 1rpx;
+        }
+      }
+    }
+
+    .musicContent {
+      .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15rpx 0;
+
+        .musicIndex {
+          flex: 1;
+          color: rgb(158, 158, 158);
+        }
+
+        .musicDetail {
+          flex: 14;
+
+          .musicName {
+            max-width: 485rpx;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          .nickName {
+            color: rgb(158, 158, 158);
+            font-size: 24rpx;
+          }
+        }
+
+        .isMv {
+          flex: 2;
+          color: rgb(158, 158, 158);
+          font-size: 33rpx;
+        }
+
+        .iconShare {
+          flex: 2;
+          color: rgb(158, 158, 158);
+        }
+      }
+    }
+  }
+}

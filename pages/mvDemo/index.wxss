@@ -1,0 +1,8 @@
+/* pages/mvDemo/index.wxss */
+.show {
+  display: show;
+}
+
+.hide {
+  display: none;
+}

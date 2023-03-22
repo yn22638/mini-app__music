@@ -1,0 +1,125 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.1",
+  "appid": "wx05422274f65f6c08",
+  "projectname": "qq%E9%9F%B3%E4%B9%90",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "歌手列表",
+          "pathName": "pages/songerList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "排行榜",
+          "pathName": "pages/rankingList/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索列表页面",
+          "pathName": "pages/searchDetail/index",
+          "query": "name='我爱你'",
+          "scene": null
+        },
+        {
+          "name": "搜索列表Detail",
+          "pathName": "pages/searchDetail/index",
+          "query": "keywords=我爱你",
+          "scene": null
+        },
+        {
+          "name": "歌单详情",
+          "pathName": "pages/songList/index",
+          "query": "id=2409342460",
+          "scene": null
+        },
+        {
+          "name": "歌单评论",
+          "pathName": "pages/songReview/index",
+          "query": "id=2409342460",
+          "scene": null
+        },
+        {
+          "name": "播放音乐",
+          "pathName": "pages/playMusic/index",
+          "query": "id=1810397812",
+          "scene": null
+        },
+        {
+          "name": "播放音乐",
+          "pathName": "pages/audio/index",
+          "query": "id=1809714827",
+          "scene": null
+        },
+        {
+          "name": "播放mv",
+          "pathName": "pages/mv/index",
+          "query": "id=5359212",
+          "scene": null
+        },
+        {
+          "name": "播放mvDemo",
+          "pathName": "pages/mvDemo/index",
+          "query": "id=5359212",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

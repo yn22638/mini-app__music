@@ -1,0 +1,3 @@
+<!--pages/mvDemo/index.wxml-->
+ <!-- <button bindtap='play'>播放</button> -->
+ <video id='myvideo' src="http://vodkgeyttp8.vod.126.net/cloudmusic/NGAgNiEiZDEgNDMkIjQgOA==/mv/5359212/715a5229c91acd330f7e2f6209125041.mp4?wsSecret=ada096c0ff14fb6b464e44321a229b11&wsTime=1611404127" autoplay="true" bindended="closeVideo" controls></video>
